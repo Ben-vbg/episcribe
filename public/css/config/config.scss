@@ -1,0 +1,24 @@
+body{
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+  overflow-x: hidden;
+}
+
+p{
+  line-height: 1.6;
+}
+
+
+.grid__row{
+  display: flex;
+  width: 100%;
+  max-width: 100%;
+
+  align-items: center;
+  justify-content: center;
+
+  .grid__col{
+
+  }
+}

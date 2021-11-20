@@ -1,0 +1,217 @@
+@font-face {
+  font-family: "playfair";
+  src: url("../../fonts/woff2/PlayfairDisplay-Regular.woff2") format("font-woff2"), url("../../fonts/woff/PlayfairDisplay-Regular.woff") format("font-woff");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "playfair";
+  src: url("../../fonts/woff2/PlayfairDisplay-Bold.woff2") format("font-woff2"), url("../../fonts/woff/PlayfairDisplay-Bold.woff") format("font-woff");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "roboto";
+  src: url("../../fonts/woff2/Roboto-Regular.woff2") format("font-woff2"), url("../../fonts/woff/Roboto-Regular.woff") format("font-woff");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "roboto";
+  src: url("../../fonts/woff2/Roboto-Bold.woff2") format("font-woff2"), url("../../fonts/woff/Roboto-Bold.woff") format("font-woff");
+  font-weight: bold;
+}
+body {
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+  overflow-x: hidden;
+}
+
+p {
+  line-height: 1.6;
+}
+
+.grid__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  max-width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+* {
+  font-family: "roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+h1 {
+  font-weight: bold;
+}
+
+header {
+  height: 100vh;
+  background: url("../images/background.jpg") no-repeat;
+  background-size: cover;
+}
+header:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+}
+header:before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(4%, black), to(rgba(0, 0, 0, 0)));
+  background: linear-gradient(0deg, black 4%, rgba(0, 0, 0, 0) 100%);
+}
+
+section {
+  padding: 80px 20px;
+}
+
+nav {
+  padding: 20px;
+  position: relative;
+  z-index: 1;
+}
+nav .grid__col:nth-child(1) {
+  position: absolute;
+  left: 20px;
+}
+nav .grid__col:nth-child(3) {
+  position: absolute;
+  right: 20px;
+}
+
+.menu__header a {
+  position: relative;
+  color: #E6E6E6;
+  font-family: "playfair";
+  font-weight: normal;
+  font-size: 20px;
+  padding: 4px;
+  margin: 0 5px;
+  text-decoration: none;
+}
+.menu__header a.actif:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 4px;
+  background: #D3AD88;
+  width: calc(100% - 8px);
+  height: 2px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.menu__header a:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 4px;
+  background: #D3AD88;
+  width: calc(0% - 8px);
+  height: 2px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.menu__header a:hover:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 4px;
+  background: #D3AD88;
+  width: calc(100% - 8px);
+  height: 2px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.punchline {
+  text-align: center;
+  position: absolute;
+  z-index: 1;
+  top: 40%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-family: "playfair";
+  font-weight: bold;
+  font-size: 4rem;
+  line-height: 4.5rem;
+  color: white;
+}
+
+.title__container {
+  width: 100%;
+  max-width: 750px;
+  margin: 0 auto;
+}
+.title__container h3 {
+  color: white;
+  font-family: "playfair", serif;
+  font-weight: bold;
+  font-size: 3rem;
+  text-align: center;
+  margin: 0;
+}
+.title__container p {
+  color: white;
+  font-family: "roboto", sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 0.7rem;
+  text-align: center;
+  margin: 0;
+}
+
+.bg__black {
+  background: black;
+}
+
+.content {
+  display: block;
+  width: 100%;
+  max-width: 550px;
+  color: white;
+}
+.content.content__center {
+  font-weight: 100;
+  max-width: 450px;
+  padding-top: 50px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.f__top {
+  position: relative;
+}
+.f__top:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  width: 1px;
+  height: 20px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background: #D3AD88;
+}
