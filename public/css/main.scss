@@ -59,13 +59,27 @@ section{
 
 
 nav{
-  padding: $pad;
-  position: relative;
-  z-index: 1;
+  padding: 40px;
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  z-index: 100;
+  
+  .grid__row{
+    position: relative;
+    z-index: 10;
+  }
 
   .grid__col:nth-child(1){
     position: absolute;
     left: 20px;
+    a{
+      img{
+        width: 100%;
+        max-width: 130px;
+      }
+    }
   }
 
   .grid__col:nth-child(3){
@@ -73,27 +87,57 @@ nav{
     right: 20px;
   }
 
+  &:after{
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: 0;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba($color: #000000, $alpha: .8);
+    transition: all .3s ease;
+  }
+
+  &.blacked{
+    &:after{
+      top: 0;
+    }
+  }
 }
 
+
+.nav__social{
+  fill: white;
+  color: transparent;
+  opacity: .6;
+  transition: opacity .3s ease;
+  &:hover{
+    opacity: .8;
+    transition: opacity .3s ease;
+  }
+}
 .menu__header{
   a{
     position: relative;
-
-    color: #E6E6E6;
+    color: rgba($color: #fff, $alpha: 0.8);
     font-family: "playfair";
     font-weight: normal;
     font-size: 20px;
-
     padding: 4px;
     margin: 0 5px;
     text-decoration: none;
 
     &.actif{
+      transition: all .3s ease;
+      color: rgba($color: #fff, $alpha: 1);
       &:after{
       content: '';
       display: block;
       position: absolute;
       left: 4px;
+      z-index: 100;
       background:#D3AD88;
       width: calc(100% - 8px);
       height: 2px;
@@ -113,6 +157,8 @@ nav{
     }
     
     &:hover{
+      transition: all .3s ease;
+      color: rgba($color: #fff, $alpha: 1);
       &:after{
         content: '';
         display: block;
@@ -386,20 +432,44 @@ footer{
   .grid__col{
     padding: 15px;
   }
+  
   .footer__search{
-    
+
   }
+
   .footer__logo{
     width: 100%;
-    max-width: 150px;
+    max-width: 20%;
     img{
       width: 100%;
-      max-width: 100%;
+      max-width: 170px;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
     }
   }
 
   .footer__infos{
 
+  }
+
+  .footer__search{
+    width: 100%;
+    max-width: 30%;
+    input{
+      width: 100%;
+      max-width: 100%;
+      padding: 10px;
+      background: none;
+      border: none;
+      outline: 1px solid rgba($color: #fff, $alpha:.5);
+      border-radius: 2px;
+      transition: outline .1s ease;
+      &:focus{
+        outline: 1px solid rgba($color: #fff, $alpha:.8);
+
+      }
+    }
   }
 
 

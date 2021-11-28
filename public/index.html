@@ -9,31 +9,38 @@
 
     <link rel="stylesheet" href="css/main.css">
 
+    <script src="https://unpkg.com/feather-icons"></script>
+
     <title>Episcribe</title>
   </head>
 
   <body>
     
     <header>
-      <nav class="grid__row">
-        <div class="grid__col">
-          <a href="index.html">
-            <img src="#" alt="Episcribe">
-          </a>
-        </div>
-        <div class="grid__col menu__header">
-          <a class="actif" href="index.html">Services</a>
-          <a href="actualites.html">Actualités</a>
-          <a href="mes-engagements.html">Mes engagements</a>
-          <a href="mes-ecris.html">Mes écris</a>
-          <a href="a-propos.html">A propos</a>
-          <a href="contact.html">Contact</a>
-        </div>
-        <div class="grid__col">
-          <div>
-            <a href="#facebook-link">Facebook</a>
-            <a href="#linkedin-link">Linkedin</a>
+      <nav>
+        <div class="grid__row">
+          <div class="grid__col">
+            <a href="index.html">
+              <img src="images/episcribe-white.png" alt="Episcribe">
+            </a>
           </div>
+
+          <div class="grid__col menu__header">
+            <a class="actif" href="index.html">Services</a>
+            <a href="actualites.html">Actualités</a>
+            <a href="mes-engagements.html">Mes engagements</a>
+            <a href="mes-ecris.html">Mes écris</a>
+            <a href="a-propos.html">A propos</a>
+            <a href="contact.html">Contact</a>
+          </div>
+
+          <div class="grid__col">
+            <div>
+              <a href="#facebook-link"><i class="nav__social" data-feather="facebook"></i></a>
+              <a href="#linkedin-link"><i class="nav__social" data-feather="linkedin"></i></a>
+            </div>
+          </div>
+
         </div>
       </nav>
       <p class="punchline">Vous avez une histoire,<br> laissez-moi la raconter</p>
@@ -155,11 +162,11 @@
 
     <footer>
 
-      <div class="wrap">
+
         <div class="grid__row">
 
           <div class="grid__col footer__logo">
-            <img src="images/episcribe.png" alt="">
+            <img src="images/episcribe-white.png" alt="">
           </div>
 
           <div class="grid__col footer__infos">
@@ -179,12 +186,12 @@
           </div>
 
           <div class="grid__col footer__search">
-            <input type="text">
+            <h4>Newsletter</h4>
+            <input type="text" placeholder="Adresse courriel...">
           </div>
 
           <div class="grid__col">
             <h4>Menu</h4>
-
             <ul>
               <li>Services</li>
               <li>Actualités</li>
@@ -196,17 +203,28 @@
           </div>
 
           <div class="grid__col">
-
+            <h4>Plus</h4>
+            <ul>
+              <li>FAQ</li>
+              <li>Contact</li>
+              <li>Facebook</li>
+              <li>Twitter</li>
+              <li>Instagram</li>
+              <li>Linkedin</li>
+            </ul>
           </div>
 
         </div>
-      </div>
+ 
 
     </footer>
 
     <!-- Nautylus scripts -->
     <script src="js/jquery.min.js"></script>
     <script src="js/main.js"></script>
+    <script>
+      feather.replace();
+    </script>
 
   </body>
 
