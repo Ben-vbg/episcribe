@@ -9,16 +9,20 @@ p{
   line-height: 1.6;
 }
 
+.wrap{
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
 
 .grid__row{
   display: flex;
   width: 100%;
-  max-width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
 
   align-items: center;
   justify-content: center;
 
-  .grid__col{
-
-  }
 }
