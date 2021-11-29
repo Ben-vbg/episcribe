@@ -68,6 +68,90 @@ p {
           box-sizing: border-box;
 }
 
+.posts__container {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.posts__container.grid__row {
+  max-width: 1600px;
+}
+
+.posts__container h1 {
+  width: 100%;
+  max-width: 100%;
+  font-family: "playfaire";
+  font-size: 41px;
+  color: #fff;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.posts__container .post {
+  width: 100%;
+  max-width: 33.33%;
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+}
+.posts__container .post:hover .post__title {
+  color: rgba(255, 255, 255, 0.8);
+}
+.posts__container .post.post__latest {
+  width: 100%;
+  height: 100%;
+  max-width: 75%;
+}
+.posts__container .post.post__latest .post__cover {
+  width: 100%;
+  max-width: 100%;
+  height: 400px;
+  max-height: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.posts__container .post .post__cover {
+  width: 100%;
+  height: 270px;
+  max-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.posts__container .post .post__title {
+  font-family: "playfair";
+  font-weight: 100;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 20px;
+  margin-top: 0;
+  margin-bottom: 4px;
+}
+.posts__container .post .post__time {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.3);
+}
+.posts__container .post__secondary {
+  width: 100%;
+  max-width: 25%;
+}
+.posts__container .post__secondary .post {
+  width: 100%;
+  height: 50%;
+  max-width: 100%;
+  max-height: 50%;
+  margin-top: 5px;
+}
+.posts__container .post__secondary .post:first-of-type {
+  margin-top: 0px;
+}
+.posts__container .post__secondary .post .post__title {
+  font-size: 19px;
+}
+
+.news__container .news__post h3 {
+  font-family: "playfaire";
+}
+
 h1 {
   font-weight: bold;
 }
@@ -97,6 +181,20 @@ header:before {
   height: 50%;
   background: -webkit-gradient(linear, left bottom, left top, color-stop(4%, black), to(rgba(0, 0, 0, 0)));
   background: linear-gradient(0deg, black 4%, rgba(0, 0, 0, 0) 100%);
+}
+
+.header__small {
+  height: 500px;
+  background: url("../images/background2.png") no-repeat center;
+  background-size: cover;
+}
+.header__small::before {
+  bottom: inherit;
+  top: 0;
+  height: 500px;
+}
+.header__small::after {
+  height: 500px;
 }
 
 section {

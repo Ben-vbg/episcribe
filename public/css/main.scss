@@ -2,6 +2,10 @@
 @import 'config/config.scss';
 @import 'config/opti.scss';
 
+@import 'blog.scss';
+
+
+
 
 h1{
   font-weight: bold;
@@ -33,6 +37,20 @@ header{
     width: 100%;
     height: 50%;
     background:linear-gradient(0deg, rgba(0,0,0,1) 4%, rgba(0,0,0,0) 100%);
+  }
+}
+
+.header__small{
+  height: 500px;
+  background: url("../images/background2.png") no-repeat center;
+  background-size: cover;
+  &::before{
+    bottom: inherit;
+    top: 0;
+    height: 500px;
+  }
+  &::after{
+    height: 500px;
   }
 }
 
@@ -218,6 +236,7 @@ nav{
   color: white;
   padding-bottom: 200px;
 }
+
 .bg__blue{
   background: #202E44;
   color: white;
@@ -448,6 +467,8 @@ footer{
       transform: translateY(-50%);
     }
   }
+
+
 
   .footer__infos{
 
