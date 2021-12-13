@@ -21,10 +21,36 @@ $(document).ready(()=> {
     $('[data-c]').each(function(){
       let id = $(this).data('c');
       let val = r.entries[0][id];
-      console.log(val);
       $(this).text(val);
     });
   }
+
+  let g__id = $('body').attr('id');
+
+  if(g__id){
+    console.log('g__id find!')
+
+    fetch(`
+    https://www.episcribe.be/cockpit/api/collections/get/${g__id}?token=b2aff9e33dda2ee179beb889fb0c86
+    `)
+    .then(res=>res.json())
+    .then(function(response) {
+      printPage(response);
+    });
+  
+    function printPage(r){
+      $('[data-c]').each(function(){
+        let id = $(this).data('c');
+        let val = r.entries[0][id];
+        $(this).html(val);
+      });
+    }
+    
+  }else{
+    console.log('no g__id!')
+  }
+
+
 
 
 });

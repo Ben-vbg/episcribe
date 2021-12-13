@@ -25,4 +25,7 @@ p{
   align-items: center;
   justify-content: center;
 
+  &.grid__row--small{
+    max-width: 750px;
+  }
 }

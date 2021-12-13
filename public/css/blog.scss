@@ -7,6 +7,12 @@
   }
 }
 
+.one__posts__container{
+  &.grid__row{
+    max-width: 750px;
+  }
+}
+
 .posts__container h1{
   width: 100%;
   max-width: 100%;
@@ -91,4 +97,38 @@
 
 .news__container .news__post h3{
   font-family: 'playfaire';
+}
+
+//Global Content
+#content{
+
+  width: 100%;
+  max-width: 100%;
+
+  ul{
+    li{
+      padding-bottom: $pad / 2;
+      list-style: circle;
+      color: rgba($color: #fff, $alpha: .6);
+    }
+  }
+
+  h2, h3, h4, h5{
+    font-family: 'playfair';
+    *{
+      font-family: 'playfair';
+    }
+  }
+
+  h3{
+    font-size: 1.4rem;
+    font-weight: normal;
+  }
+
+  img{
+    display: block;
+    width: 100%;
+    max-width: 100%;
+  }
+
 }

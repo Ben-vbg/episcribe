@@ -59,6 +59,9 @@ p {
       -ms-flex-pack: center;
           justify-content: center;
 }
+.grid__row.grid__row--small {
+  max-width: 750px;
+}
 
 * {
   font-family: "roboto", sans-serif;
@@ -77,6 +80,10 @@ p {
 }
 .posts__container.grid__row {
   max-width: 1600px;
+}
+
+.one__posts__container.grid__row {
+  max-width: 750px;
 }
 
 .posts__container h1 {
@@ -150,6 +157,31 @@ p {
 
 .news__container .news__post h3 {
   font-family: "playfaire";
+}
+
+#content {
+  width: 100%;
+  max-width: 100%;
+}
+#content ul li {
+  padding-bottom: 10px;
+  list-style: circle;
+  color: rgba(255, 255, 255, 0.6);
+}
+#content h2, #content h3, #content h4, #content h5 {
+  font-family: "playfair";
+}
+#content h2 *, #content h3 *, #content h4 *, #content h5 * {
+  font-family: "playfair";
+}
+#content h3 {
+  font-size: 1.4rem;
+  font-weight: normal;
+}
+#content img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
 }
 
 h1 {
