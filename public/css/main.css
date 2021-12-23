@@ -183,6 +183,21 @@ p {
   width: 100%;
   max-width: 100%;
 }
+#content p {
+  color: rgba(255, 255, 255, 0.8);
+}
+#content strong {
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.9);
+}
+#content a {
+  color: #D3AD88;
+  text-decoration: none;
+}
+#content hr {
+  border: none;
+  border-bottom: 1px solid #d3ad8846;
+}
 
 h1 {
   font-weight: bold;
