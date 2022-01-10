@@ -6,50 +6,43 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link rel="stylesheet" href="css/main.css">
-
     <script src="https://unpkg.com/feather-icons"></script>
-
     <title>Episcribe</title>
   </head>
 
   <body>
     
     <header>
+
       <nav>
-
         <div class="grid__row">
-          <div class="grid__col">
-            <a href="index.html">
-              <img src="images/episcribe-white.png" alt="Episcribe">
-            </a>
-          </div>
-
           <div class="grid__col menu__header">
-            <a class="actif" href="index.html">Services</a>
+            <a class="actif" href="index.html">Episcribe</a>
             <a href="actualites.html">Actualités</a>
             <a href="mes-engagements.html">Mes engagements</a>
-            <a href="mes-ecrits.html">Mes écrits</a>
             <a href="mes-tarifs.html">Mes tarifs</a>
             <a href="a-propos.html">A propos</a>
             <a href="contact.html">Contact</a>
           </div>
-
-          <div class="grid__col">
-            <div>
-              <a href="#facebook-link"><i class="nav__social" data-feather="facebook"></i></a>
-            </div>
-          </div>
-
         </div>
       </nav>
-      <p class="punchline">Vous avez une histoire,<br> laissez-moi la raconter</p>
+
+      <div class="punchline">
+        <img class="header__logo" src="images/episcribe.svg" alt="Episcribe">
+        <p>Vous avez une histoire,<br> laissez-moi la raconter</p>
+        <a href="#services">
+          <svg class="header__cta" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" xml:space="preserve">
+            <path class="arrow__svg" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="m74 87 26 26 26-26"/>
+          </svg>
+        </a>
+      </div>
+
     </header>
 
     <main>
 
-      <section class="bg__black">
+      <section id="services" class="bg__black">
 
         <div class="title__container">
           <h3>Services</h3>
@@ -62,32 +55,38 @@
 
       </section>
 
-      <section class="bg__black sect__oneTwo">
+      <section class="bg__black sect__oneTwo fioright">
         <div class="wrap">
 
           <div class="grid__row">
             <div class="grid__col f__circle f__circle__one">
-
-              <p  data-c="section_text_1"></p>
-
+              <p data-c="section_text_1"></p>
             </div>
             <div class="grid__col"></div>
           </div>
-  
+
           <div class="grid__row">
+              <p data-c="section_text_1-2">
+                Toutes les vies sont intéressantes, aucune ne mérite de tomber dans l’oubli, c’est pourquoi je vous aide, quels que soient votre âge, votre parcours ou votre but. 
+              </p>
+          </div>
+  
+          <div class="grid__row fioright__in">
             <div class="grid__col"></div>
             <div class="grid__col f__circle f__circle__two">
-              
-              <p  data-c="section_text_2"></p>
-
+              <p data-c="section_text_2"></p>
             </div>
+          </div>
+
+          <div class="grid__row">
+              <p  data-c="section_text_1-2">
+                Je vous propose également une aide précieuse pour structurer votre récit. Je pourrai également, si cela est plus simple pour vous, rédiger en amont du travail une interview qui vous guidera dans votre histoire, vous permettant de la raconter sous forme de questions-réponses dans un premier temps.
+              </p>
           </div>
   
           <div class="grid__row">
             <div class="grid__col f__circle f__circle__three">
-
               <p  data-c="section_text_3"></p>
-
             </div>
             <div class="grid__col"></div>
           </div>
@@ -95,29 +94,17 @@
         </div>
       </section>
 
-
+      <!-- NEWS -->
       <section class="bg__blue blog__section">
           <div class="grid__row">
 
             <h2 class="title__section title__middleSection">Dernières actualités</h2>
 
-            <div class="grid__col blog__short">
-              <h3>Lorem ipsum dolor sit...</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi provident voluptas deserunt aliquam accusamus at sed, ducimus delectus dolore ipsam, aut maiores.
-              </p>
-            </div>
-
-            <div class="grid__col blog__short">
-              <h3>Ducimus delectus dolore.</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi provident voluptas deserunt aliquam accusamus at sed, ducimus delectus dolore ipsam, aut maiores.
-              </p>
-            </div>
+            <div data-shortPosts></div>
 
             <div class="grid__col blog__short">
               <span class="call__to">
-                <a class="call__to--read actif" href="#">Lire plus</a>
+                <a class="call__to--read actif" href="actualites.html">Lire plus</a>
               </span>
             </div>
 
@@ -162,26 +149,20 @@
     </main>
 
     <footer>
-
       <div class="grid__row">
 
         <div class="grid__col footer__logo">
-          <img src="images/episcribe-white.png" alt="">
+          <img src="images/episcribe.svg">
         </div>
 
-        <div class="grid__col footer__infos">
-          <h4>Episcribe.be</h4>
-
+        <div class="grid__col">
+          <h4>Menu</h4>
           <ul>
-            <li>Écrivaine à Bruxelles</li>
-            <li>12 Avenue des pommes | 1000 Bruxelles | Belgique</li>
-            <li>+32 (0) 444/ 78.78.78</li>
-            <li>contact@episcibe.be</li>
-          </ul>
-
-          <ul>
-            <li>Episcribe</li>
-            <li>TVA 0000.122.122</li>
+            <li><a href="index.html">Services</a></li>
+            <li><a href="actualites.html">Actualités</a></li>
+            <li><a href="mes-engagements.html">Mes engagements</a></li>
+            <li><a href="a-propos.html">A propos</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
 
@@ -190,32 +171,32 @@
           <input type="text" placeholder="Adresse courriel...">
         </div>
 
-        <div class="grid__col">
-          <h4>Menu</h4>
+        <div class="grid__col footer__infos">
+          <h4>Episcribe.be</h4>
+
           <ul>
-            <li>Services</li>
-            <li>Actualités</li>
-            <li>Mes engagements</li>
-            <li>Mes écrits</li>
-            <li>A propos</li>
-            <li>Contact</li>
+            <li><span data-c="job"></span> à <span data-c="ville"></span></li>
+            <li><span data-c="code_postal"></span> | <span data-c="pays"></span></li>
+            <li data-c="gsm"></li>
+            <li data-c="email"></li>
+          </ul>
+
+          <ul>
+            <li><b>TVA</b> <span data-c="tva"></span></li>
+            <li><b>IBAN</b> <span data-c="iban"></span></li>
           </ul>
         </div>
 
         <div class="grid__col">
           <h4>Plus</h4>
           <ul>
-            <li>FAQ</li>
-            <li>Contact</li>
-            <li>Facebook</li>
-            <li>Twitter</li>
-            <li>Instagram</li>
-            <li>Linkedin</li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="vie-privee.html">Vie privée</a></li>
+            <li><a href="mentions-legales.html">Mentions légales</a></li>
           </ul>
         </div>
 
       </div>
- 
     </footer>
 
     <!-- Nautylus scripts -->
