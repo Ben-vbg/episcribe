@@ -1,12 +1,21 @@
 $(document).ready(()=> {
 
   $(window).scroll(function() {
+    let width = window.innerWidth;
     let distanceFromTop = $(window).scrollTop();
-    if(distanceFromTop != 0){
+    if(distanceFromTop != 0 && width > 1000){
       $('nav').addClass('blacked');
     }else{
       $('nav').removeClass('blacked');
     }
+  });
+
+  $('.menu__icon').on('click', function(){
+    $('nav').removeClass('hide');
+  });
+
+  $('.close__icon').on('click', function(){
+    $('nav').addClass('hide');
   });
 
    // Configuration ==================================

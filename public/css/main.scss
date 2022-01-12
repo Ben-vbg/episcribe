@@ -5,7 +5,94 @@
 @import 'blog.scss';
 
 
+.close__icon, .menu__icon, .epi__icon{
+  display: none;
+}
+.container__photoProfil{
+  max-width: 750px;
+  width: 100%;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  position: relative;
+  span{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 95px;
+    line-height: 145px;
+    font-family: 'playfair';
+    font-size: 36px;
+    color: white;
+  }
+}
+.photoProfil{
+  width: 100%;
+  max-width: 150px;
+  border: 1px solid #d3ad8858;
+  border-radius: 50%;
+  padding: 10px;
+  opacity: .7;
+  position: relative;
+  display: block;
+  left: -75px;
+}
 
+.section_text_centered{
+  position: relative;
+    &::after{
+      content: '';
+      display: block;
+      position: absolute;
+      top: -20px;
+      left: 0;
+      width: 200px;
+      height: 2px;
+      background: #D3AD88;
+      opacity: .15;
+    }
+    &.section_text_centered--2{
+      &::after{
+        left: inherit;
+        
+      }
+    }
+}
+
+.call__to__mail.bg__black {
+  text-align: center;
+  padding: 30px 20px;
+  height: 50vh;
+  position: relative;
+  &:before{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 750px;
+    opacity: .15;
+    border-top: 1px solid #D3AD88;
+  }
+  .grid__row{
+    max-width: 750px;
+    width: 100%;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+
+    h4{
+      font-family: 'playfair';
+      font-size: 36px;
+      color: white;
+      a{
+        font-family: 'playfair';
+        font-size: 36px;
+        color: #D3AD88;;
+      }
+    }
+  }
+}
 
 h1{
   font-weight: bold;
@@ -273,7 +360,6 @@ nav{
 .bg__black{
   background: black;
   color: white;
-  padding-bottom: 200px;
 }
 
 .bg__blue{
@@ -525,24 +611,14 @@ footer{
 
   .grid__col{
     padding: 15px;
-  }
-  
-  .footer__logo{
     width: 100%;
-    max-width: 20%;
-    img{
-      width: 100%;
-      max-width: 170px;
-      position: relative;
-      top: 50%;
-      transform: translateY(-50%);
-      opacity: .5;
-    }
+    max-width: 25%;
   }
+
 
   .footer__search{
     width: 100%;
-    max-width: 30%;
+    max-width: 50%;
     input{
       width: 100%;
       max-width: 100%;
@@ -600,5 +676,227 @@ footer{
     height: 40vw;
     background: url('../images/fio_1.svg') no-repeat;
     background-size: contain;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .posts__container .post{
+    max-width: 50%;
+  }
+}
+
+
+@media screen and (max-width: 1150px) {
+  .sect__oneTwo {
+    .wrap{
+      max-width: 750px;
+      .grid__row{
+        min-height: 30vh;
+        p{
+          max-width: 500px;
+        }
+        .grid__col{
+          max-width: 500px;
+          &.empty{
+            display: none;
+          }
+          p{
+            width: 100%;
+            max-width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  footer{
+    .grid__row{
+      max-width: 550px;
+      flex-wrap: wrap;
+      justify-content: center;
+
+    }
+    .grid__col{
+      width: 100%;
+      max-width: 50%;
+    }
+    .footer__search{
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+
+  .blog__section{
+    padding-bottom: 130px;
+  }
+  .title__middleSection{
+    display: block;
+    width: 100%;
+    max-width: 450px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .blog__section .grid__row{
+    flex-wrap: wrap;
+    .blog__short{
+      display: block;
+      width: 100%;
+      max-width: 450px;
+      margin: 0 auto;
+      flex: none;
+      &:last-of-type{
+        .call__to{
+          padding-top : 50px; 
+          left: inherit;
+          transform: translateY(-50%);
+          a{
+            margin-left: 0;
+            padding-left: 0;
+            &:after{
+              left: 0;
+              width: calc(100% - 4px);
+            }
+          }
+        }
+        
+      }
+    }
+  }
+
+  .testimony{
+    &.grid__row{
+      flex-wrap: wrap;
+      .testimony__post{
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 35px;
+        p{
+          max-width: 450px;
+          width: 100%;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+
+  .bg__black{
+    padding-bottom: 50px;
+  }
+}
+
+
+@media screen and (max-width: 1000px) {
+  .sect__oneTwo{
+    padding-bottom: 140px;
+  }
+  .sect__oneTwo .wrap .grid__row{
+    min-height: auto;
+  }
+
+  .epi__icon{
+    display: block;
+    position: absolute;
+    z-index: 5;
+    width: 100px;
+    top: 20px;
+    left: 20px;
+    a{
+      color: white;
+      font-family: "playfair";
+      font-weight: normal;
+      font-size: 21px;
+      cursor: pointer;
+    }
+  }
+
+  .close__icon{
+    display: block;
+    color: white;
+    position: absolute;
+    width: 30px;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+  }
+
+  .menu__icon{
+    display: block;
+    color: white;
+    position: absolute;
+    width: 30px;
+    top: 20px;
+    left: -60px;
+    cursor: pointer;
+  }
+
+  nav{
+    background: #202E44;
+    height: 100vh;
+    transition: all .6s ease;
+    &.hide{
+      right: -100%;
+      left: inherit;
+      transform: none;
+      transition: all .6s ease;
+    }
+    .grid__row{
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .menu__header{
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      a{
+      text-align: center;
+      font-size: 31px;
+      margin-bottom: 25px;
+      &.actif{
+        &:after{
+          width: 100px;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+      &:hover{
+        &:after{
+          width: 100px;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .posts__container .post{
+    max-width: 550px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .blog__section{
+    padding: 40px 20px 80px 20px;
+  }
+  .title__section.title__middleSection{
+    padding-left: 20px;
+  }
+  footer{
+    .grid__col{
+      padding-top: 0;
+      width: 100%;
+      max-width: 100%;
+      border-top: 1px solid rgba($color: #D3AD88, $alpha: .1);
+      &:first-of-type{
+        border-top: none;
+      }
+
+    }
   }
 }

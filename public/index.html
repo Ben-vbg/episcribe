@@ -14,8 +14,10 @@
   <body>
     
     <header>
-
-      <nav>
+      
+      <nav class="hide">
+        <div class="menu__icon"><img src="images/menu.svg" alt=""></div>
+        <div class="close__icon"><img src="images/close.svg" alt=""></div>
         <div class="grid__row">
           <div class="grid__col menu__header">
             <a class="actif" href="index.html">Episcribe</a>
@@ -62,24 +64,24 @@
             <div class="grid__col f__circle f__circle__one">
               <p data-c="section_text_1"></p>
             </div>
-            <div class="grid__col"></div>
+            <div class="grid__col empty"></div>
           </div>
 
           <div class="grid__row">
-              <p data-c="section_text_1-2">
+              <p class="section_text_centered" data-c="section_text_1-2">
                 Toutes les vies sont intéressantes, aucune ne mérite de tomber dans l’oubli, c’est pourquoi je vous aide, quels que soient votre âge, votre parcours ou votre but. 
               </p>
           </div>
   
           <div class="grid__row fioright__in">
-            <div class="grid__col"></div>
+            <div class="grid__col empty"></div>
             <div class="grid__col f__circle f__circle__two">
               <p data-c="section_text_2"></p>
             </div>
           </div>
 
           <div class="grid__row">
-              <p  data-c="section_text_1-2">
+              <p class="section_text_centered section_text_centered--2" data-c="section_text_1-2">
                 Je vous propose également une aide précieuse pour structurer votre récit. Je pourrai également, si cela est plus simple pour vous, rédiger en amont du travail une interview qui vous guidera dans votre histoire, vous permettant de la raconter sous forme de questions-réponses dans un premier temps.
               </p>
           </div>
@@ -88,7 +90,7 @@
             <div class="grid__col f__circle f__circle__three">
               <p  data-c="section_text_3"></p>
             </div>
-            <div class="grid__col"></div>
+            <div class="grid__col empty"></div>
           </div>
 
         </div>
@@ -129,37 +131,12 @@
 
     </main>
 
+    <!-- Footer -->
     <footer>
       <div class="grid__row">
 
-        <!-- <div class="grid__col footer__logo">
-          <img src="images/episcribe.svg">
-        </div> -->
-
-
-
-        <div class="grid__col footer__search">
-          <h4>Newsletter</h4>
-          <input type="text" placeholder="Adresse courriel...">
-        </div>
-        <div class="grid__col footer__search">
-
-        </div>
-
-        <!-- <div class="grid__col">
-          <h4>Menu</h4>
-          <ul>
-            <li><a href="index.html">Services</a></li>
-            <li><a href="actualites.html">Actualités</a></li>
-            <li><a href="mes-engagements.html">Mes engagements</a></li>
-            <li><a href="a-propos.html">A propos</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div> -->
-
         <div class="grid__col footer__infos">
           <h4>Episcribe.be</h4>
-
           <ul>
             <li><span data-c="job"></span> à <span data-c="ville"></span></li>
             <li><span data-c="code_postal"></span> | <span data-c="pays"></span></li>
@@ -171,13 +148,18 @@
         <div class="grid__col">
           <h4>Plus</h4>
           <ul>
-            <!-- <li><a href="faq.html">FAQ</a></li> -->
             <li><a href="mentions-legales.html">Mentions légales</a></li>
           </ul>
           <ul>
             <li><b>TVA</b> <span data-c="tva"></span></li>
             <li><b>IBAN</b> <span data-c="iban"></span></li>
           </ul>
+        </div>
+
+
+        <div class="grid__col footer__search">
+          <h4>Newsletter</h4>
+          <input type="text" placeholder="Adresse courriel...">
         </div>
 
       </div>

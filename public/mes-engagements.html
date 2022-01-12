@@ -17,19 +17,18 @@
   <body id="engagements">
     
     <header class="header header__small">
-      <nav>
+      <nav class="hide">
+        <div class="menu__icon"><img src="images/menu.svg" alt=""></div>
+        <div class="close__icon"><img src="images/close.svg" alt=""></div>
         <div class="grid__row">
-
           <div class="grid__col menu__header">
             <a href="index.html">Episcribe</a>
             <a href="actualites.html">Actualités</a>
             <a class="actif" href="mes-engagements.html">Mes engagements</a>
-            <!-- <a href="mes-ecrits.html">Mes écrits</a> -->
             <a href="mes-tarifs.html">Mes tarifs</a>
             <a href="a-propos.html">A propos</a>
             <a href="contact.html">Contact</a>
           </div>
-
         </div>
       </nav>
 
@@ -44,74 +43,51 @@
     <main>
 
       <section class="bg__black">
-
         <div class="posts__container one__posts__container grid__row ">
-          
-          
-
           <div id="content" data-c="content"></div>
-
         </div>
+      </section>
 
+      <section class="bg__black call__to__mail">
+        <div class="grid__row">
+          <h4>Vous avez un projet, <a href="#">discutons-en</a>.</h4>
+        </div>
       </section>
 
     </main>
 
+    <!-- Footer -->
     <footer>
-
       <div class="grid__row">
-
-        <div class="grid__col footer__logo">
-          <img src="images/episcribe-white.png" alt="">
-        </div>
 
         <div class="grid__col footer__infos">
           <h4>Episcribe.be</h4>
-
           <ul>
-            <li>Écrivaine à Bruxelles</li>
-            <li>12 Avenue des pommes | 1000 Bruxelles | Belgique</li>
-            <li>+32 (0) 444/ 78.78.78</li>
-            <li>contact@episcibe.be</li>
-          </ul>
-
-          <ul>
-            <li>Episcribe</li>
-            <li>TVA BE0778.738.665</li>
-          </ul>
-        </div>
-
-        <div class="grid__col footer__search">
-          <h4>Newsletter</h4>
-          <input type="text" placeholder="Adresse courriel...">
-        </div>
-
-        <div class="grid__col">
-          <h4>Menu</h4>
-          <ul>
-            <li>Services</li>
-            <li>Actualités</li>
-            <li>Mes engagements</li>
-            <li>Mes écrits</li>
-            <li>A propos</li>
-            <li>Contact</li>
+            <li><span data-c="job"></span> à <span data-c="ville"></span></li>
+            <li><span data-c="code_postal"></span> | <span data-c="pays"></span></li>
+            <li data-c="gsm"></li>
+            <li data-c="email"></li>
           </ul>
         </div>
 
         <div class="grid__col">
           <h4>Plus</h4>
           <ul>
-            <li>FAQ</li>
-            <li>Contact</li>
-            <li>Facebook</li>
-            <li>Twitter</li>
-            <li>Instagram</li>
-            <li>Linkedin</li>
+            <li><a href="mentions-legales.html">Mentions légales</a></li>
+          </ul>
+          <ul>
+            <li><b>TVA</b> <span data-c="tva"></span></li>
+            <li><b>IBAN</b> <span data-c="iban"></span></li>
           </ul>
         </div>
 
+
+        <div class="grid__col footer__search">
+          <h4>Newsletter</h4>
+          <input type="text" placeholder="Adresse courriel...">
+        </div>
+
       </div>
- 
     </footer>
 
     <!-- Nautylus scripts -->
