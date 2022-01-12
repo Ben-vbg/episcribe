@@ -11,12 +11,11 @@
     <title>Episcribe</title>
   </head>
 
-  <body id="actualites">
+  <body>
     
     <header class="header header__small">
       <nav>
         <div class="grid__row">
-
           <div class="grid__col menu__header">
             <a href="index.html">Episcribe</a>
             <a class="actif" href="actualites.html">Actualités</a>
@@ -25,24 +24,29 @@
             <a href="a-propos.html">A propos</a>
             <a href="contact.html">Contact</a>
           </div>
-
         </div>
       </nav>
 
       <!-- MODULE HEADER -->
       <div class="header__module">
-        <h1 data-c="name">Dernières actualités</h1>
+        <h1 id="articleTitle">-</h1>
         <span data-c="agence">EPISCRIBE</span>
       </div>
-
+      
     </header>
 
     <main>
 
       <section class="bg__black">
-        <div class="posts__container grid__row">
-          <div data-listPosts></div>
+
+        <div class="posts__container one__posts__container grid__row ">
+          
+          <div id="content" data-c="content">
+
+          </div>
+
         </div>
+
       </section>
 
     </main>

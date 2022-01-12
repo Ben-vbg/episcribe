@@ -648,9 +648,11 @@ nav.blacked:after {
   padding-top: 80px;
 }
 .testimony .testimony__post {
+  width: 100%;
+  max-width: 33.33%;
   opacity: 0.8;
 }
-.testimony .testimony__post.testimony__secondary {
+.testimony .testimony__post:nth-of-type(odd) {
   opacity: 0.5;
 }
 .testimony .testimony__post p {
