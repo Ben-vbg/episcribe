@@ -30,12 +30,13 @@
 }
 html, body {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
   margin: 0 auto;
   width: 100%;
-  height: auto;
+  height: 100%;
   overflow-x: hidden;
   background: black;
 }
@@ -88,7 +89,7 @@ p {
 }
 
 .one__posts__container.grid__row {
-  max-width: 750px;
+  max-width: 600px;
 }
 
 .posts__container h1 {
@@ -206,6 +207,12 @@ p {
 
 .close__icon, .menu__icon, .epi__icon {
   display: none;
+}
+
+.txt__centered {
+  display: block;
+  text-align: center;
+  margin-bottom: 8px;
 }
 
 .container__photoProfil {
@@ -846,16 +853,18 @@ footer .footer__search input:focus {
   outline: 1px solid rgba(255, 255, 255, 0.8);
 }
 
-.fioright__in::after {
-  content: "";
-  display: block;
+.fioright__in {
+  position: relative;
+}
+.fioright__in .thumbnail {
+  -moz-transform: none !important;
+  max-width: 700px;
+  -webkit-filter: blur(0px);
+          filter: blur(0px);
+  opacity: 0.7;
   position: absolute;
-  opacity: 0.1;
-  left: -30vh;
-  width: 40vw;
-  height: 40vw;
-  background: url("../images/fio_1.svg") no-repeat;
-  background-size: contain;
+  top: -200px;
+  left: -65%;
 }
 
 .fioright::after {
@@ -893,6 +902,10 @@ footer .footer__search input:focus {
   }
 }
 @media screen and (max-width: 1150px) {
+  .thumbnail {
+    display: none;
+  }
+
   .sect__oneTwo .wrap {
     max-width: 750px;
   }
@@ -1025,6 +1038,14 @@ footer .footer__search input:focus {
     top: 20px;
     right: 20px;
     cursor: pointer;
+    opacity: 0.7;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  .close__icon:hover {
+    opacity: 0.9;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
   }
 
   .menu__icon {
@@ -1035,21 +1056,32 @@ footer .footer__search input:focus {
     top: 20px;
     left: -60px;
     cursor: pointer;
+    opacity: 0.7;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  .menu__icon:hover {
+    opacity: 0.9;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
   }
 
   nav {
     background: #202E44;
     height: 100vh;
-    -webkit-transition: all 0.6s ease;
-    transition: all 0.6s ease;
-  }
-  nav.hide {
-    right: -100%;
     left: inherit;
+    right: 0%;
     -webkit-transform: none;
             transform: none;
-    -webkit-transition: all 0.6s ease;
-    transition: all 0.6s ease;
+    -webkit-transition: 0.6s all 0.3s ease;
+    transition: 0.6s all 0.3s ease;
+  }
+  nav.hide {
+    left: inherit;
+    right: -100%;
+    left: inherit;
+    -webkit-transition: 0.6s all 0.3s ease;
+    transition: 0.6s all 0.3s ease;
   }
   nav .grid__row {
     top: 50%;
@@ -1085,7 +1117,40 @@ footer .footer__search input:focus {
             transform: translateX(-50%);
   }
 }
+@media screen and (max-width: 950px) {
+  .photoProfil {
+    left: 0;
+  }
+
+  .container__photoProfil span {
+    left: 170px;
+  }
+}
 @media screen and (max-width: 860px) {
+  .title__section.title__middleSection {
+    font-size: 36px;
+    top: -26px;
+  }
+
+  .punchline {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .punchline .header__logo {
+    opacity: 0.7;
+    max-width: 200px;
+  }
+
+  .punchline p {
+    font-size: 2.6rem;
+    line-height: 3rem;
+  }
+
+  .section_text_centered::after {
+    display: none;
+  }
+
   .posts__container .post {
     max-width: 550px;
   }
@@ -1107,5 +1172,37 @@ footer .footer__search input:focus {
   }
   footer .grid__col:first-of-type {
     border-top: none;
+  }
+}
+@media screen and (max-width: 550px) {
+  .photoProfil {
+    max-width: 100px;
+    padding: 5px;
+  }
+
+  .container__photoProfil span {
+    line-height: 90px;
+    left: 120px;
+    font-size: 26px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .photoProfil {
+    max-width: 80px;
+    padding: 5px;
+  }
+
+  .container__photoProfil span {
+    line-height: 70px;
+    left: 100px;
+    font-size: 26px;
+  }
+
+  .call__to__mail.bg__black .grid__row h4 {
+    font-size: 26px;
+  }
+  .call__to__mail.bg__black .grid__row h4 a {
+    display: block;
+    font-size: 26px;
   }
 }

@@ -32,6 +32,9 @@
     <link rel="mask-icon" href="images/fav/safari-pinned-tab.svg" color="#d3ad88">
     <meta name="msapplication-TileColor" content="#d3ad88">
     <meta name="theme-color" content="#353535">
+
+    <script async="" src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@16.1.2/dist/smooth-scroll.polyfills.min.js"></script>
+    
         
   </head>
 
@@ -44,7 +47,7 @@
         <div class="close__icon"><img src="images/close.svg" alt=""></div>
         <div class="grid__row">
           <div class="grid__col menu__header">
-            <a class="actif" href="index.html">Episcribe</a>
+            <a class="actif" href="https://episcribe.be/">Episcribe</a>
             <a href="actualites.html">Actualités</a>
             <a href="mes-engagements.html">Mes engagements</a>
             <a href="mes-tarifs.html">Mes tarifs</a>
@@ -54,7 +57,7 @@
         </div>
       </nav>
 
-      <div class="punchline">
+      <h1 class="punchline">
         <img class="header__logo" src="images/episcribe.svg" alt="Episcribe">
         <p>Vous avez une histoire,<br> laissez-moi la raconter</p>
         <a href="#services">
@@ -62,7 +65,7 @@
             <path class="arrow__svg" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" d="m74 87 26 26 26-26"/>
           </svg>
         </a>
-      </div>
+      </h1>
 
     </header>
 
@@ -75,15 +78,14 @@
           <p>Episcribe</p>
         </div>
 
-        <div class="content content__center f__top">
+        <div class="content content__center f__top" data-c="section_text_intro">
           Lorem ipsum dolor, sit amet consectetur adipicing elit. Sunt commodi, cumque ex sam, molestiae veritatis maxime fugit earum copti corporis sint atque ipsa animi! Odio.
         </div>
 
       </section>
-
+      
       <section class="bg__black sect__oneTwo fioright">
         <div class="wrap">
-
           <div class="grid__row">
             <div class="grid__col f__circle f__circle__one">
               <p data-c="section_text_1"></p>
@@ -98,6 +100,9 @@
           </div>
   
           <div class="grid__row fioright__in">
+
+            <img class="thumbnail" src="images/livre_1.png" alt="image">
+
             <div class="grid__col empty"></div>
             <div class="grid__col f__circle f__circle__two">
               <p data-c="section_text_2"></p>
@@ -164,8 +169,8 @@
           <ul>
             <li><span data-c="job"></span> à <span data-c="ville"></span></li>
             <li><span data-c="code_postal"></span> | <span data-c="pays"></span></li>
-            <li data-c="gsm"></li>
-            <li data-c="email"></li>
+            <li><a href="tel:+32472/ 04.25.26" data-c="gsm"></a></li>
+            <li><a href="mailto:contact@episcribe.be" data-c="email"></a></li>
           </ul>
         </div>
 
@@ -191,7 +196,9 @@
 
     <!-- Nautylus scripts -->
     <script src="js/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.5.1/dist/simpleParallax.min.js"></script>
     <script src="js/main.js"></script>
+    
 
   </body>
 

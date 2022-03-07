@@ -1,5 +1,12 @@
 $(document).ready(()=> {
 
+  var image = document.getElementsByClassName('thumbnail');
+  new simpleParallax(image, {
+  delay: 10,
+  orientation: 'up',
+  transition: 'cubic-bezier(0,0,0,2)'
+  });
+
   $(window).scroll(function() {
     let width = window.innerWidth;
     let distanceFromTop = $(window).scrollTop();
@@ -65,7 +72,7 @@ $(document).ready(()=> {
       printPage(response);
     });
   }else{
-    console.log('no g__id!')
+    // console.log('no g__id!')
   }
 
 
@@ -81,7 +88,7 @@ $(document).ready(()=> {
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString);
   const gid = urlParams.get('id');
-  console.log(gid);
+  // console.log(gid);
 
   // Posts ==================================
 
@@ -116,15 +123,19 @@ $(document).ready(()=> {
 
   function printListPosts(r){
     if(gid){
-      let pos;
+      let pos = "no_gid";
+
       for (let i = 0; i < r.entries.length; i++) {
         if(r.entries[i]._id == gid){
           pos = i;
         }
       }
 
-      $('#articleTitle').text(r.entries[pos].titre);
-      $('[data-c="content"]').html(r.entries[pos].corp);
+      // Valide ID
+      if(pos != "no_gid"){
+        $('#articleTitle').text(r.entries[pos].titre);
+        $('[data-c="content"]').html(r.entries[pos].corp);
+      }
 
     }else{
       $('[data-listPosts]').each(function(){
