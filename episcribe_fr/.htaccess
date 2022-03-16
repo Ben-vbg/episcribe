@@ -1,0 +1,4 @@
+<IfModule mod_rewrite.c>
+  RewriteEngine on
+  RewriteRule ^(.*)$ https://episcribe.be/$1 [R=301,L]
+</IfModule>
