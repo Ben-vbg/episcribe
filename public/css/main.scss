@@ -3,8 +3,111 @@
 @import 'config/opti.scss';
 
 @import 'blog.scss';
+#table_formules_mobile{
+  display: none;
+}
+.table_formules_mobile--box{
+  border: 1px solid rgba($color: #fff, $alpha: .2);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  padding-top: 10px;
+  padding-bottom: 0;
+  margin-bottom: 10px;
+  text-align: center;
+  &::before{
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: -1;
+    opacity: .3;
+    top: 10px;
+    left: 10px;
+    width: calc(100% - 20px);
+    height: 100%;
+  }
+  &.bg3{
+    &::before{
+      opacity: .5;
+      background: url("../images/bg3-min.jpg") no-repeat center;
+    }
+  }
+  &.bg4{
+    &::before{
+      background: url("../images/bg4-min.jpg") no-repeat center;
+    }
+  }
+  &.bg5{
+    &::before{
+      background: url("../images/bg5-min.jpg") no-repeat center;
+    }
+  }
 
+  ul{
+    padding: 0;
+    li{
+      list-style: none;
+      opacity: .7;
+      font-weight: 100;
+      font-size: 14px;
+      
+      padding: 8px;
+    }
+  }
+  h2{
+    margin-top: 10px;
+    font-family: 'playfair';
+  }
+  .prices{
+    background: #202E44;
+    margin-bottom: 0;
+    padding: 10px;
+  }
+}
 
+#table_formules{
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  
+  .table_formules--row{
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .table_formules--cell{
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    padding: 10px;
+    padding-top: 20px;
+    margin-bottom: 10px;
+    opacity: .6;
+    margin-right: 10px;
+    margin-left: 10px;
+    border-top: 1px solid rgba($color: #fff, $alpha: .2);
+
+    &.table_formules--cellSideLeft{
+      min-width: 300px;
+      text-align: left;
+      font-size: 14px;
+    }
+  }
+  .table_formules--cellred{
+    color: rgba(151, 125, 125, 0.6);
+  }
+  .table_formules--cellBottom{
+    opacity: 1;
+  }
+  .table_formules--cellHeader{
+    border-top: none;
+    opacity: 1;
+  }
+}
 
 .close__icon, .menu__icon, .epi__icon{
   display: none;
@@ -906,6 +1009,29 @@ footer{
   }
   .container__photoProfil span{
     left: 170px;
+  }
+  #table_formules{
+    display: none;
+  }
+  #table_formules_mobile{
+    display: block;
+  }
+  // Tarifs
+  #table_formules .table_formules--cell.table_formules--cellSideLeft{
+    min-width:80px;
+    margin-left: 0;
+    margin: 0;
+    padding: 5px;
+    padding-left: 0;
+  }
+  #table_formules .table_formules--cellHeader, #table_formules .table_formules--cell{
+    font-size: 12px;
+  }
+  #table_formules .table_formules--cell.table_formules--cellSideLeft{
+    &.table_formules--cellBottom{
+      padding-top: 20px;
+    }
+    
   }
 }
 
